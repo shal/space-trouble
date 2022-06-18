@@ -15,7 +15,7 @@ type BookingRepository interface {
 }
 
 type SpacexService interface {
-	FindByLaunchpadID(ctx context.Context, launchpadID string) (model.Launchpad, error)
+	FindByLaunchpadID(ctx context.Context, launchpadID string) (*model.Launchpad, error)
 }
 
 type CustomerService interface {
