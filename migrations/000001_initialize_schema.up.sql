@@ -15,5 +15,6 @@ CREATE TABLE bookings
     PRIMARY KEY ("id")
 );
 
-CREATE INDEX bookings_launchpad_id   ON bookings("launchpad_id");
-CREATE INDEX bookings_destination_id ON bookings("destination_id");
+CREATE        INDEX bookings_launchpad_id   ON bookings("launchpad_id");
+CREATE        INDEX bookings_destination_id ON bookings("destination_id");
+CREATE UNIQUE INDEX bookings_unique_launchpad_id_and_launch_date ON bookings("launchpad_id", "launch_date");

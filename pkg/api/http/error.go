@@ -5,20 +5,21 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/opencars/seedwork"
-	"github.com/opencars/seedwork/httputil"
-	"github.com/opencars/seedwork/logger"
+	"github.com/opencars/space-trouble/pkg/httputil"
+	"github.com/opencars/space-trouble/pkg/logger"
+
+	"github.com/opencars/space-trouble/pkg/domain/model"
 )
 
 func handleErr(err error) error {
 	logger.Errorf("%s", err)
 
-	var e seedwork.Error
+	var e model.Error
 	if errors.As(err, &e) {
 		return httputil.NewError(http.StatusBadRequest, e.Error())
 	}
 
-	var vErr seedwork.ValidationError
+	var vErr model.ValidationError
 	if errors.As(err, &vErr) {
 		errMessage := make([]string, 0)
 		for k, vv := range vErr.Messages {

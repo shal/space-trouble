@@ -6,7 +6,7 @@ import (
 	"runtime"
 
 	"github.com/gorilla/mux"
-	"github.com/opencars/seedwork/httputil"
+	"github.com/opencars/space-trouble/pkg/httputil"
 
 	"github.com/opencars/space-trouble/pkg/domain"
 	"github.com/opencars/space-trouble/pkg/domain/command"

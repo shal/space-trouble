@@ -7,10 +7,10 @@ import (
 	"os"
 
 	"github.com/gorilla/handlers"
-	"github.com/opencars/seedwork/logger"
 
 	"github.com/opencars/space-trouble/pkg/config"
 	"github.com/opencars/space-trouble/pkg/domain"
+	"github.com/opencars/space-trouble/pkg/logger"
 )
 
 // Start starts the server with specified store.

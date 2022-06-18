@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"syscall"
 
+	"github.com/opencars/space-trouble/pkg/api/http"
 	"github.com/opencars/space-trouble/pkg/logger"
 
-	"github.com/opencars/space-trouble/pkg/api/http"
 	"github.com/opencars/space-trouble/pkg/config"
 	"github.com/opencars/space-trouble/pkg/domain/service"
 	"github.com/opencars/space-trouble/pkg/store/sqlstore"

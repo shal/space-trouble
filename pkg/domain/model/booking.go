@@ -7,10 +7,6 @@ const (
 	Female Gender = "female"
 )
 
-type Date string
-
-const DateLayout = "2006-01-02"
-
 type Booking struct {
 	ID            string `db:"id"`
 	FirstName     string `db:"first_name"`
